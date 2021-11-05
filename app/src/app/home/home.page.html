@@ -1,0 +1,53 @@
+
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="abby">
+      <ion-title color="light">Start Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item > <ion-button   color="abby" [routerLink]="['/pruebas']">Pruebas</ion-button></ion-item>
+      <ion-item> <ion-button color="abby" [routerLink]="['/traductor']">Traductor</ion-button></ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="main"></ion-router-outlet>
+
+<ion-header [translucent]="true">
+  <ion-toolbar color="abby">
+    <ion-title (click)="openFirst()" color="light">
+      <ion-icon name="menu-outline" ></ion-icon>
+      LSM ABBY
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-infinite-scroll>
+    <div class="ion-text-center">
+<img width="50%" src="https://www.lsm.cdmx.gob.mx/pluginfile.php/51/course/overviewfiles/2000_5eb5bec257e4a.jpg">
+</div>
+    <!--<ion-button (click)="httpCall()"></ion-button>
+
+
+<ion-list *ngFor="let item of items">
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="./avatar.svg">
+    </ion-avatar>
+    <ion-label>
+      <h3>Lorem ipsum</h3>
+      <p>dolor sit amet</p>
+      <p>consectetur adipiscing elit. Duis ut urna neque.</p>
+    </ion-label>
+  </ion-item>
+
+</ion-list>
+-->
+</ion-infinite-scroll>
+  
+
+</ion-content>
+

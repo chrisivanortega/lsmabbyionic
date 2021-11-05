@@ -1,0 +1,52 @@
+<ion-header >
+
+  <ion-toolbar color="abby">
+    <ion-title> <ion-button  color="abby" [routerLink]="['/pruebas']">Volver</ion-button></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-text-center">
+  <ion-row>
+    <ion-col size="0">
+      
+    </ion-col>
+    <ion-col size="12">
+
+      <ion-item>
+        <ion-avatar slot="start" text="center">
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+        <ion-label>Pregunta numero {{pregunta.id}}</ion-label>
+      </ion-item>
+      <h2>{{ pregunta.pregunta }}</h2>
+      <ion-label>
+        
+        
+        <p>Selecciona los recuadros que sea la pregunta correcta</p>
+      </ion-label>
+
+      
+      <div class="ion-text-center" *ngFor="let response of random_responses">
+          
+            
+              
+                <div class="ng-binding" (click)="response_click(response.id)"><img  src="{{response.img}}"> </div>
+              
+            
+          
+        </div>
+
+      
+      
+
+
+    </ion-col>
+    <ion-col size="0">
+      
+    </ion-col>
+  </ion-row>
+
+</div>
+  
+</ion-content>
