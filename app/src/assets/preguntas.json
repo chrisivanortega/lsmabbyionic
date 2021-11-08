@@ -1,0 +1,22 @@
+{
+    "preguntas":[
+    {
+      "id":1,
+      "categoria":"persona",
+      "pregunta":"como se dice yo?",
+      "respuesta":1
+    },
+    {
+        "id":2,
+        "categoria":"persona",
+        "pregunta":"como se dice tu?",
+        "respuesta":2
+    },
+    {
+        "id":3,
+        "categoria":"persona",
+        "pregunta":"como se dice hola?",
+        "respuesta":3
+    }        
+  ]
+}

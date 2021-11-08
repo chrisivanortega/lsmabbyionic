@@ -42,7 +42,7 @@ export class PreguntaPage implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.id = params['id'];
       this.pregunta =  this.senas.getPreguntabyId(this.id)
-      this.random_responses = this.random_responses_generator(this.senas.db_senas,this.pregunta.respuesta )
+      this.random_responses = this.random_responses_generator(this.senas.senas,this.pregunta.respuesta )
       
       
       

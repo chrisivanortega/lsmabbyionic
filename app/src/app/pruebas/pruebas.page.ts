@@ -8,21 +8,33 @@ import { SenasService } from '../services/senas.service';
 
 
 export class PruebasPage implements OnInit {
-
-  constructor(private senas: SenasService) { }
-  
   preguntas: any = []
+  constructor(private senas: SenasService) {
+    
+    this.senas.getSenas()
+    this.senas.getPreguntas()
+    
+    this.preguntas = this.senas.preguntas
+    
+  }
+  
 
-  getSenas(){
-    return this.senas.db_senas
+  iniciar(){
+    this.senas.getSenas()
+    this.senas.getPreguntas()    
+    this.preguntas = this.senas.preguntas
   }
 
   getPreguntas(id:Number){
    
   }
+
   ngOnInit() {
-    this.preguntas = this.senas.db_preguntas
-    console.log(this.preguntas)
+
+
+    
+    
+    
   }
 
 }

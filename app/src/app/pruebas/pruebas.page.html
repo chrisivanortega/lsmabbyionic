@@ -1,11 +1,14 @@
 <ion-header>
-  <ion-toolbar  color="abby">
-    <ion-title> <ion-button color="abby" [routerLink]="['/']">Volver</ion-button></ion-title>
+  <ion-toolbar  color="dark">
+    <ion-title> <ion-button color="dark" [routerLink]="['/']">Volver</ion-button></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-button (click)="iniciar()" expand="block"  >
+    Iniciar
+  </ion-button>
   <ion-list *ngFor="let item of preguntas">
     <ion-item [routerLink]="['/pregunta/']" [queryParams]="{id: item.id}">
       

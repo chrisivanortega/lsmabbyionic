@@ -1,14 +1,39 @@
 
 <ion-menu side="start" menuId="first" contentId="main">
   <ion-header>
-    <ion-toolbar color="abby">
-      <ion-title color="light">Start Menu</ion-title>
+    <ion-toolbar color="dark">
+      <ion-title color="light">Menu Principal</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item > <ion-button   color="abby" [routerLink]="['/pruebas']">Pruebas</ion-button></ion-item>
-      <ion-item> <ion-button color="abby" [routerLink]="['/traductor']">Traductor</ion-button></ion-item>
+
+      <ion-item> 
+        <ion-button icon-only fill="clear" >
+        <ion-icon name="attach" color="dark"></ion-icon>      <ion-label [routerLink]="['/abc']" color="dark">Abecedario</ion-label>      
+      </ion-button>
+      </ion-item>
+
+      <ion-item> 
+        <ion-button icon-only fill="clear" >
+        <ion-icon name="language" color="dark"></ion-icon>      <ion-label [routerLink]="['/traductor']" color="dark">Traductor</ion-label>      
+      </ion-button>
+      </ion-item>
+
+  
+
+      <ion-item> 
+        <ion-button icon-only fill="clear" >
+        <ion-icon name="list" color="dark"></ion-icon>      <ion-label [routerLink]="['/pruebas']" color="dark">Ejercicios</ion-label>      
+      </ion-button>
+      </ion-item>
+
+      <ion-item> 
+        <ion-button icon-only fill="clear" >
+        <ion-icon name="list" color="dark"></ion-icon>      <ion-label [routerLink]="['/braile']" color="dark">Braile</ion-label>      
+      </ion-button>
+      </ion-item>
+
 
     </ion-list>
   </ion-content>
@@ -16,10 +41,10 @@
 <ion-router-outlet id="main"></ion-router-outlet>
 
 <ion-header [translucent]="true">
-  <ion-toolbar color="abby">
+  <ion-toolbar color="dark">
     <ion-title (click)="openFirst()" color="light">
-      <ion-icon name="menu-outline" ></ion-icon>
-      LSM ABBY
+      <ion-icon name="hand-right"></ion-icon>
+      LSM PARA TODOS 
     </ion-title>
   </ion-toolbar>
 </ion-header>

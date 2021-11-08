@@ -19,6 +19,20 @@ const routes: Routes = [
     path: 'pregunta',
     loadChildren: () => import('./pregunta/pregunta.module').then( m => m.PreguntaPageModule)
   },
+  {
+    path: 'traductor',
+    loadChildren: () => import('./traductor/traductor.module').then( m => m.TraductorPageModule)
+  },
+
+
+  {
+    path: 'abc',
+    loadChildren: () => import('./abc/abc.module').then( m => m.AbcPageModule)
+  },
+  {
+    path: 'braile',
+    loadChildren: () => import('./braile/braile.module').then( m => m.BrailePageModule)
+  }
 ];
 
 @NgModule({
