@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-
+import { SenasService } from '../services/senas.service';
 @Component({
   selector: 'app-abc',
   templateUrl: './abc.page.html',
@@ -8,8 +8,9 @@ import { AlertController } from '@ionic/angular';
 })
 export class AbcPage implements OnInit {
 
-  letras = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','nn','o','p','q','r','s','t','u','v','w','x','y','z']
-  constructor(public alertController: AlertController) { }
+  letras:any =[]
+
+  constructor(public alertController: AlertController,private senas: SenasService) { }
   async moreinfo(letra:string){
 
     const alert = await this.alertController.create({      
@@ -24,6 +25,8 @@ export class AbcPage implements OnInit {
 
   }
   ngOnInit() {
+    this.senas.getAbecedario().subscribe((data)=>{this.letras = data})
+    
   }
 
 }

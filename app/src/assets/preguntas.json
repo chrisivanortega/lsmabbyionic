@@ -1,5 +1,5 @@
-{
-    "preguntas":[
+
+    [
     {
       "id":1,
       "categoria":"persona",
@@ -19,4 +19,3 @@
         "respuesta":3
     }        
   ]
-}

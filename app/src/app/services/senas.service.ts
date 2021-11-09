@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -10,13 +11,16 @@ export class SenasService {
   senas:any = []
   preguntas:any = []
   
-  constructor() {
-
+  constructor(private httpClient: HttpClient) {
+    this.getSenas().subscribe(data => this.senas = data)
+    this.getPreguntas().subscribe(data => this.preguntas = data)
    }
 
 
   getRespuesById(id:any){
+    
     for (let index = 0; index < this.senas.length; index++) {
+      
       const element = this.senas[index];
       if (element.id == id){
         return element
@@ -26,8 +30,12 @@ export class SenasService {
   }
 
   getPreguntabyId(id:any){
+    
+    
     for (let index = 0; index < this.preguntas.length; index++) {
+      
       const element = this.preguntas[index];
+      
       if (element.id == id){
         return element
       }
@@ -35,26 +43,14 @@ export class SenasService {
     }
   }
   getSenas(){
-
-    const r = fetch('./assets/senas.json');
-    r.then((response) => response.json())
-    .then((data) => {      
-      this.senas = data.senas      
-      
-    })
-    
+    return this.httpClient.get('./assets/senas.json');
   }
 
-  async getPreguntas(){
-    const r = fetch('./assets/preguntas.json');
-    r.then((response) => response.json())
-    .then((data) => {         
-      
-      this.preguntas = data.preguntas
-      
-      
-    })
+  getAbecedario(){
+    return this.httpClient.get('./assets/abc.json');
   }
 
-
-}
+  getPreguntas(){
+    return this.httpClient.get('./assets/preguntas.json');
+  }
+  }

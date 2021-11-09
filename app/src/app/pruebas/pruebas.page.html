@@ -6,9 +6,6 @@
 
 <ion-content>
 
-  <ion-button (click)="iniciar()" expand="block"  >
-    Iniciar
-  </ion-button>
   <ion-list *ngFor="let item of preguntas">
     <ion-item [routerLink]="['/pregunta/']" [queryParams]="{id: item.id}">
       
