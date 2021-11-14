@@ -1,10 +1,10 @@
 <ion-header>
-  <ion-toolbar  color="dark">
+  <ion-toolbar  color="abby">
     <ion-title> <ion-button color="dark" [routerLink]="['/']">Volver</ion-button></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark">
   
   <ion-item>
     <ion-label position="floating">Busca</ion-label>
@@ -12,16 +12,32 @@
   </ion-item>
   
 
+  <ion-grid>
+  <ion-row   >
 
-  <ion-grid >
-    <ion-row *ngFor="let item of letras; let i = index" >
-      <ion-col (click)="moreinfo(item)"  >
-        <img src="/assets/lsm_abc/{{item}}.png">       
+    
+      <ion-col *ngFor="let item of letras; let i = index" size="4"  (click)="moreinfo(item)"  >
+
+        
+        
+        
+               
+        <ion-card color="dark" class="ion-text-center" >
+          <img src="/assets/lsm_abc/{{item}}.png"> 
+          <ion-card-header>
+            
+            <ion-card-title>{{item}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+
+
       </ion-col>
-    </ion-row>
-  </ion-grid>
-
+      
+    
   
+  </ion-row>
+
+  </ion-grid>
 
 
   

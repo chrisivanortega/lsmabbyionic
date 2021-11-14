@@ -36,7 +36,7 @@
 
 
     </ion-list>
-  </ion-content>
+  </ion-content >
 </ion-menu>
 <ion-router-outlet id="main"></ion-router-outlet>
 
@@ -49,30 +49,48 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-infinite-scroll>
-    <div class="ion-text-center">
-<img width="50%" src="https://www.lsm.cdmx.gob.mx/pluginfile.php/51/course/overviewfiles/2000_5eb5bec257e4a.jpg">
-</div>
-    <!--<ion-button (click)="httpCall()"></ion-button>
+<ion-content [fullscreen]="true" color="dark">  
+
+  <ion-row>
+    <ion-col size="12">
+      <img src="/assets/img/hola_lsm.jpg"> 
+    </ion-col>
+    <ion-col size="7">
+
+      <ion-card color="dark"> 
+        <img src="/assets/img/home1.jpeg"> 
+        
+        <ion-card-content>
+          <ion-icon name="information-circle"></ion-icon>
+         Aprende con ejemplos, busca como decir una oracion
+        </ion-card-content>
+      </ion-card>
+
+    </ion-col>
 
 
-<ion-list *ngFor="let item of items">
-  <ion-item>
-    <ion-avatar slot="start">
-      <img src="./avatar.svg">
-    </ion-avatar>
-    <ion-label>
-      <h3>Lorem ipsum</h3>
-      <p>dolor sit amet</p>
-      <p>consectetur adipiscing elit. Duis ut urna neque.</p>
-    </ion-label>
-  </ion-item>
+    <ion-col size="5">
+      
+      <ion-card color="dark"> 
+        <img src="/assets/img/{{imageSource[index].img}}"> 
+        
+        <ion-card-content>
+          <ion-icon name="information-circle"></ion-icon>
+          {{imageSource[index].text}}
+        </ion-card-content>
+      </ion-card>
 
-</ion-list>
--->
-</ion-infinite-scroll>
+
+    </ion-col>
   
+
+
+
+
+  </ion-row>
+
+
+
 
 </ion-content>
 

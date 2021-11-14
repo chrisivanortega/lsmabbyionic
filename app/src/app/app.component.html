@@ -1,3 +1,35 @@
 <ion-app>
+
   <ion-router-outlet></ion-router-outlet>
+
+  <ion-tabs color="dark">
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="pruebas" [routerLink]="['/pruebas']"> 
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Pruebas</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="abc" [routerLink]="['/abc']">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Abecedario</ion-label>
+      </ion-tab-button>
+  
+  
+      <ion-tab-button tab="home" [routerLink]="['/']">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="traductor" [routerLink]="['/traductor']">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>Traductor</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="braile" [routerLink]="['/braile']">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>Braile</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-app>

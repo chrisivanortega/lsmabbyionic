@@ -11,6 +11,10 @@ import { HttpClient } from '@angular/common/http';
 
 
 export class HomePage {
+
+  imageSource:any=[{"img":"hola_lsm.jpg","text":"hola bienvenido"},{"img":"home1.jpeg",text:"aprende"},{"img":"not.jpeg","text":"notificas y mas"}]
+  id:any = 0
+  index:any = 0
   
   constructor(private menu: MenuController,private http: HttpClient) {}
 
@@ -26,5 +30,25 @@ export class HomePage {
       this.items = data['data']
     })
   }
+
+  changeNews(i:any){
+    console.log((i+1)%this.imageSource.length,i)
+    this.index = (i+1)%this.imageSource.length
+
+  }
+
+  ngOnInit() {
+    
+    
+    this.id = setInterval(() => {
+    this.changeNews(this.index); 
+    }, 10000);
+  }
+  ngOnDestroy() {
+    if (this.id) {
+      clearInterval(this.id);
+    }
+  }  
+  
 
 }
