@@ -53,11 +53,20 @@
 
   <ion-row>
     <ion-col size="12">
-      <img src="/assets/img/hola_lsm.jpg"> 
+  
+
+      <ion-card class="ion-text-center" color="dark"> 
+        <img src="/assets/img/header.jpeg"> 
+        
+        <ion-card-content>
+          
+        </ion-card-content>
+      </ion-card>
+
     </ion-col>
     <ion-col size="7">
 
-      <ion-card color="dark"> 
+      <ion-card color="dark" style="height: 200px;"> 
         <img src="/assets/img/home1.jpeg"> 
         
         <ion-card-content>
@@ -71,7 +80,8 @@
 
     <ion-col size="5">
       
-      <ion-card color="dark"> 
+      <ion-card color="dark" style="height: 200px;"> 
+        <img src="/assets/img/nots.jpg"> 
         <img src="/assets/img/{{imageSource[index].img}}"> 
         
         <ion-card-content>
@@ -83,8 +93,26 @@
 
     </ion-col>
   
+    <ion-col size="12">
+    <ion-card class="ion-text-center" color="dark" [routerLink]="['/abc']" routerLinkActive="router-link-active" > 
+      <img src="/assets/img/abc.webp"> 
+      
+      <ion-card-content>
+        
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
 
 
+  <ion-col size="12">
+    <ion-card class="ion-text-center" color="dark" [routerLink]="['/braile']" routerLinkActive="router-link-active" > 
+      <img src="/assets/img/braile.png"> 
+      
+      <ion-card-content>
+        
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
 
 
   </ion-row>

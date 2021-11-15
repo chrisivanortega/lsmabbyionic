@@ -32,6 +32,10 @@ const routes: Routes = [
   {
     path: 'braile',
     loadChildren: () => import('./braile/braile.module').then( m => m.BrailePageModule)
+  },
+  {
+    path: 'sennas',
+    loadChildren: () => import('./sennas/sennas.module').then( m => m.SennasPageModule)
   }
 ];
 
