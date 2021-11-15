@@ -8,11 +8,19 @@
   
   <ion-item>
     <ion-label position="floating">Busca</ion-label>
-    <ion-input (keypress)="buildPhrase($event)"></ion-input>
+    <ion-input (keyup)="buildPhrase($event)"></ion-input>
   </ion-item>
   
 
   <ion-grid>
+<ion-row>
+  
+  <ion-col *ngFor="let item of oracion; let i = index" size="1"  (click)="moreinfo(item)"  >    
+    <img src="/assets/lsm_abc/{{item}}.png"> 
+  </ion-col>
+</ion-row>
+
+
   <ion-row   >
 
     

@@ -9,7 +9,7 @@ import { SenasService } from '../services/senas.service';
 export class AbcPage implements OnInit {
 
   letras:any =[]
-  oracion:String = ""
+  oracion:any = []
 
   constructor(public alertController: AlertController,private senas: SenasService) { }
   async moreinfo(letra:string){
@@ -31,10 +31,9 @@ export class AbcPage implements OnInit {
   }
 
   buildPhrase(input:any) {
-    let sennas =Array(this.senas)
-    console.log([...sennas])
-
-
+    
+    let sennas =this.letras
+    this.oracion = [...input.target.value]
   }
 
 }

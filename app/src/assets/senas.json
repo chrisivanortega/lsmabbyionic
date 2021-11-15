@@ -9,7 +9,7 @@
   },
   {
     "id":2,
-    "img":"https://estudiosdesordos.weebly.com/uploads/5/2/9/6/52968719/_7233268.jpg",
+    "img":"assets/sennas/tu.jpg",
     "name":"tu",
     "desc":"tu",
     "move":"1"
@@ -34,6 +34,28 @@
   "img":"https://estudiosdesordos.weebly.com/uploads/5/2/9/6/52968719/_9137483.jpg",
   "name":"ustedes",
   "desc":"ustedes",
+  "move":"1"
+},
+{
+  "id":6,
+  "img":"assets/sennas/comer.jpg",
+  "name":"comer",
+  "desc":"comer",
+  "move":"1"
+},
+
+{
+  "id":7,
+  "img":"assets/sennas/mio.jpg",
+  "name":"mio",
+  "desc":"mio",
+  "move":"1"
+}   ,
+{
+  "id":8,
+  "img":"assets/sennas/novia.jpg",
+  "name":"novia",
+  "desc":"novia",
   "move":"1"
 }  
   ]
