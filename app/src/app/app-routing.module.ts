@@ -36,6 +36,10 @@ const routes: Routes = [
   {
     path: 'sennas',
     loadChildren: () => import('./sennas/sennas.module').then( m => m.SennasPageModule)
+  },
+  {
+    path: 'cam',
+    loadChildren: () => import('./cam/cam.module').then( m => m.CamPageModule)
   }
 ];
 

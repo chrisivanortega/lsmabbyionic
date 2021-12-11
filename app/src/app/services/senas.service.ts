@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CameraPhoto } from '@capacitor/camera';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SenasService {
-
 
     
   senas:any = []
