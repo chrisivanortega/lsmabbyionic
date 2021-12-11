@@ -26,6 +26,9 @@ export class TraductorPage implements OnInit {
 
   }
 
+  moreinfo(item:any){
+
+  }
   buildPhrase(input:any){
     let text = input.target.value
     let tmp = text.split(" ");

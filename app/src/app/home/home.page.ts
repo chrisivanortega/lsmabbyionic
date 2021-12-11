@@ -26,13 +26,13 @@ export class HomePage {
   httpCall(){
     this.http.get('https://reqres.in/api/users?page=1')
     .subscribe(data=>{
-      console.log(data)
+      
       this.items = data['data']
     })
   }
 
   changeNews(i:any){
-    console.log((i+1)%this.imageSource.length,i)
+    
     this.index = (i+1)%this.imageSource.length
 
   }
